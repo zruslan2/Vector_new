@@ -18,9 +18,11 @@ public:
 	Vector operator=(const Vector &obj);
 	bool operator==(const Vector &obj);
 	double& operator[](int index);
+	friend ostream& operator<<(ostream& os, Vector v);
 	//metods
 	double& push_back(double val);
 	double& at(int index);
 	//destructor
 	~Vector() { delete[]els; }
+		
 };

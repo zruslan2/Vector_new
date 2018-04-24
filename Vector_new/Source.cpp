@@ -35,6 +35,8 @@ int main()
 	if (v == v1)cout << "true\n";
 	else 
 		cout << "false\n";
+
+	cout << v << endl;
 	system("pause");
 	return 0;
 }
