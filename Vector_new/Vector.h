@@ -1,0 +1,26 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
+class Vector
+{
+private:
+	int cur_size;
+	int buf_size;
+	double *els;
+public:
+	//cons
+	Vector();	
+	Vector(int size);
+	Vector (const Vector &obj);
+	int size()const { return cur_size; }
+	//operators
+	Vector operator=(const Vector &obj);
+	bool operator==(const Vector &obj);
+	double& operator[](int index);
+	//metods
+	double& push_back(double val);
+	double& at(int index);
+	//destructor
+	~Vector() { delete[]els; }
+};
