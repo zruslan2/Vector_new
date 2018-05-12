@@ -10,7 +10,7 @@ int main()
 	for (int i = 0;i < v.size();i++)
 		cout << v.at(i) << endl;
 
-	cout << endl << endl;
+	cout << endl;
 
 	v[0] = 1.8;
 	v.at(1) = 5.4;
@@ -27,15 +27,18 @@ int main()
 	cout << endl;
 	for (int i = 0;i < v.size();i++)
 		cout << v1[i] << endl;
-
+	cout << endl;
 	if (v == v1)cout << "true\n";
-
+	cout << endl;
 	v1.push_back(15);
 	v.push_back(15);
 	if (v == v1)cout << "true\n";
 	else 
 		cout << "false\n";
-
+	cout << endl;
+	cout << v << endl;
+	v + v2;
+	cout << endl;
 	cout << v << endl;
 	system("pause");
 	return 0;
