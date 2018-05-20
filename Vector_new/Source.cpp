@@ -51,7 +51,8 @@ int main()
 	double a = v3 << 1;
 	cout << a << endl;			
 	cout << v3 << endl;
-
+	v3 >> 5;
+	cout << v3 << endl;
 	system("pause");
 	return 0;
 }

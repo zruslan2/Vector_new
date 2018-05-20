@@ -21,6 +21,7 @@ public:
 	bool operator==(const Vector &obj);
 	bool operator!=(const Vector &obj);
 	double& operator<<(int index);
+	double& operator>>(double val);
 	double& operator[](int index);
 	friend ostream& operator<<(ostream& os, Vector v);
 	//metods

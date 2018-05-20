@@ -145,6 +145,29 @@ double & Vector::operator<<(int index)
 	return temp;
 }
 
+double & Vector::operator >> (double val)
+{
+	if (buf_size <= 0)
+	{
+		buf_size = 2;
+		els = new double[buf_size];
+	}
+	else
+	{
+		if (cur_size >= buf_size)
+		{
+			buf_size *= 2;
+			double *tmp = new double[size()];
+			for (int i = 0; i < size(); i++)
+				tmp[i] = els[i];
+			delete[] els;
+			els = tmp;
+		}
+	}
+	els[cur_size++] = val;
+	return els[cur_size - 1];
+}
+
 ostream& operator<<(ostream& os, Vector v)
 {
 	for (int i = 0;i < v.size();i++)
