@@ -115,6 +115,21 @@ bool Vector::operator==(const Vector &obj)
 	return true;
 }
 
+bool Vector::operator!=(const Vector & obj)
+{
+	if (cur_size != obj.cur_size)
+		return true;
+	else
+		for (int i = 0; i < size(); i++)
+		{
+			if (els[i] != obj.els[i])
+			{
+				return true;
+			}
+		}
+	return false;
+}
+
 ostream& operator<<(ostream& os, Vector v)
 {
 	for (int i = 0;i < v.size();i++)

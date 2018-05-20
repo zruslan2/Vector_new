@@ -31,8 +31,8 @@ int main()
 	if (v == v1)cout << "true\n";
 	cout << endl;
 	v1.push_back(15);
-	v.push_back(15);
-	if (v == v1)cout << "true\n";
+	/*v.push_back(15);*/
+	if (v != v1)cout << "true\n";
 	else 
 		cout << "false\n";
 	cout << endl;

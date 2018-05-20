@@ -19,6 +19,7 @@ public:
 	Vector operator+(const Vector &obj);
 	Vector operator-(const Vector &obj);
 	bool operator==(const Vector &obj);
+	bool operator!=(const Vector &obj);
 	double& operator[](int index);
 	friend ostream& operator<<(ostream& os, Vector v);
 	//metods
