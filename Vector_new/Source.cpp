@@ -53,6 +53,9 @@ int main()
 	cout << v3 << endl;
 	v3 >> 5;
 	cout << v3 << endl;
+	v3 >> 10;
+	v3 >> 11;	
+	cout << v3 << endl;
 	system("pause");
 	return 0;
 }

@@ -61,6 +61,25 @@ Vector Vector::operator-(const Vector & obj)
 	}
 	return *this;
 }
+Vector Vector::operator~()
+{
+	for (int i = 0; i < cur_size; i++)
+	{
+		for (int j = 0; j < cur_size; j++)
+		{
+			if (i != j)
+			{
+				if (els[i] == els[j])
+				{
+					for (int k = i; k < cur_size; k++)
+						els[k] = els[k + 1];
+					cur_size--;
+				}
+			}
+		}
+	}		
+	return *this;
+}
 double& Vector::push_back(double val)
 {
 	if (buf_size <= 0)

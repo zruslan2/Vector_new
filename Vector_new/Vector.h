@@ -18,6 +18,7 @@ public:
 	Vector operator=(const Vector &obj);
 	Vector operator+(const Vector &obj);
 	Vector operator-(const Vector &obj);
+	Vector operator~();
 	bool operator==(const Vector &obj);
 	bool operator!=(const Vector &obj);
 	double& operator<<(int index);
