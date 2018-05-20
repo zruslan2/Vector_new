@@ -43,6 +43,24 @@ Vector Vector::operator+(const Vector & obj)
 	buf_size += obj.buf_size;
 	return *this;
 }
+Vector Vector::operator-(const Vector & obj)
+{
+	for (int i = 0; i < cur_size; i++)
+	{
+		for (int j = 0; j < obj.cur_size; j++)
+		{
+			if (els[i] == obj.els[j])
+			{
+				for (int k = i; k < cur_size - 1; k++)
+				{
+					els[k] = els[k + 1];
+					cur_size--;
+				}
+			}
+		}
+	}
+	return *this;
+}
 double& Vector::push_back(double val)
 {
 	if (buf_size <= 0)

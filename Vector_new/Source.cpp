@@ -40,6 +40,9 @@ int main()
 	v + v2;
 	cout << endl;
 	cout << v << endl;
+	v - v2;
+	cout << endl;
+	cout << v << endl;
 	system("pause");
 	return 0;
 }
