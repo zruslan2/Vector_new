@@ -54,8 +54,8 @@ Vector Vector::operator-(const Vector & obj)
 				for (int k = i; k < cur_size - 1; k++)
 				{
 					els[k] = els[k + 1];
-					cur_size--;
 				}
+				cur_size--;
 			}
 		}
 	}
@@ -128,6 +128,21 @@ bool Vector::operator!=(const Vector & obj)
 			}
 		}
 	return false;
+}
+
+double & Vector::operator<<(int index)
+{
+	double temp;
+	if (index < cur_size)
+	{
+		temp = els[index];
+		for (int i = index; i < cur_size; i++)
+		{
+			els[i] = els[i + 1];			
+		}
+		cur_size--;
+	}
+	return temp;
 }
 
 ostream& operator<<(ostream& os, Vector v)

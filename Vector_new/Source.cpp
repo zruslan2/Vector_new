@@ -31,7 +31,7 @@ int main()
 	if (v == v1)cout << "true\n";
 	cout << endl;
 	v1.push_back(15);
-	/*v.push_back(15);*/
+	v.push_back(15);
 	if (v != v1)cout << "true\n";
 	else 
 		cout << "false\n";
@@ -43,6 +43,15 @@ int main()
 	v - v2;
 	cout << endl;
 	cout << v << endl;
+	Vector v3;
+	v3.push_back(10);
+	v3.push_back(11);
+	v3.push_back(12);
+	cout << v3 << endl;
+	double a = v3 << 1;
+	cout << a << endl;			
+	cout << v3 << endl;
+
 	system("pause");
 	return 0;
 }
