@@ -53,9 +53,10 @@ int main()
 	cout << v3 << endl;
 	v3 >> 5;
 	cout << v3 << endl;
-	v3 >> 10;
-	v3 >> 11;	
+	v3 >> 10;	
 	cout << v3 << endl;
+	cout<<(v3.operator~())<<endl;
+	
 	system("pause");
 	return 0;
 }
